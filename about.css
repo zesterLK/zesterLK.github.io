@@ -1,0 +1,200 @@
+/* Custom Styles */
+:root {
+  --bg-color: black;
+  --txt-color: #fefcfb;
+  --txt-color-opposite: black;
+  /* --border-test: 2px solid #FEFCFB; */
+  --icon-color: #fefcfb;
+  --icon-color-opposite: black;
+  --fullscreen-vh: 96vh;
+  --font-pr: "Audiowide", cursive;
+  --font-sec: "Bebas Neue", cursive;
+  --display: none;
+  --display2: visible;
+  --hover-nav-color: #fefcfb;
+}
+
+.light-theme {
+  --bg-color: #fefcfb;
+  --txt-color: black;
+  --txt-color-opposite: #fefcfb;
+  /* --border-test: 2px solid black; */
+  --icon-color: black;
+  --icon-color-opposite: #fefcfb;
+  --display: visible;
+  --display2: none;
+  --hover-nav-color: black;
+}
+
+/* Cursor */
+a:hover,
+img:hover {
+  cursor: url("./images/Cursor/hand-black.png"), auto;
+}
+:hover {
+  cursor: url("./images/Cursor/cursor-white.png"), auto;
+}
+
+.fa-moon {
+  display: var(--display);
+}
+.fa-sun {
+  display: var(--display2);
+}
+
+/* Root Settings */
+
+h1 {
+  font-size: 1.8em;
+}
+
+* {
+  /* background-color: var(--bg-color); */
+  font-family: var(--font-pr);
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: var(--txt-color);
+}
+
+.home-nav:hover,
+.skills-nav:hover,
+.contact-nav:hover,
+.socials:hover {
+  color: var(--txt-color-opposite);
+  background-color: var(--hover-nav-color);
+  fill: var(--icon-color-opposite);
+  border-radius: 6%;
+}
+.socials {
+  padding: 8px 0;
+}
+
+.home-nav,
+.skills-nav,
+.contact-nav {
+  padding: 0 8px;
+}
+
+.mode {
+  transform: translateY(1px);
+}
+
+.mode:hover {
+  /* color: var(--icon-color); */
+  fill: var(--icon-color);
+}
+
+/* .fa-sun:hover,
+.fa-moon:hover {
+  border-radius: 6%;
+  padding: 0 6px;
+} */
+
+/* Needed for Sticky to work for Navigation */
+header {
+  display: unset;
+  z-index: 10;
+}
+
+.navigation {
+  background-color: var(--bg-color);
+  z-index: 10;
+  position: relative;
+  top: 0%;
+  border: var(--border-test);
+}
+
+/* Navigation animation
+@keyframes wipe-enter {
+  0% {
+    transform: scale(0, 0.025);
+  }
+  50% {
+    transform: scale(1, 0.025);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .navigation {
+    animation: wipe-enter 1s 1;
+  }
+} */
+
+/* Body definitions */
+body {
+  text-align: center;
+  background-color: var(--bg-color);
+}
+
+/* Footer */
+#footer {
+  clear: both;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* padding: 40px 40px; */
+  border: var(--border-test);
+}
+
+.socials {
+  padding: 4px 4px;
+  width: 40px;
+  height: 40px;
+  fill: var(--icon-color);
+}
+
+/* Body */
+
+.content {
+  padding: 20vh 0;
+  display: flex;
+  align-items: center;
+}
+
+.title > h1,
+.pronunciation {
+  display: inline-flex;
+}
+
+.title > h2 {
+  font-weight: 200;
+  font-style: italic;
+}
+
+.intro {
+  font-style: italic;
+}
+
+.logo {
+  fill: var(--icon-color);
+  max-height: 400px;
+}
+
+@media all and (orientation: portrait) {
+  * {
+    font-size: 1.3rem;
+  }
+
+  #footer {
+    position: relative;
+  }
+
+  .title {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    max-height: 250px;
+  }
+
+  .content {
+    padding: 4rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+  }
+}

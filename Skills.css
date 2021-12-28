@@ -1,29 +1,29 @@
 /* Custom Styles */
 :root {
   --bg-color: black;
-  --txt-color: white;
+  --txt-color: #fefcfb;
   --txt-color-opposite: black;
-  /* --border-test: 2px solid white; */
-  --icon-color: white;
+  /* --border-test: 2px solid #FEFCFB; */
+  --icon-color: #fefcfb;
   --icon-color-opposite: black;
   --fullscreen-vh: 96vh;
   --font-pr: "Audiowide", cursive;
   --font-sec: "Bebas Neue", cursive;
   --display: none;
   --display2: visible;
-  --hover-nav-color: rgba(255, 255, 255, 0.37);
+  --hover-nav-color: #fefcfb;
 }
 
 .light-theme {
-  --bg-color: white;
+  --bg-color: #fefcfb;
   --txt-color: black;
-  --txt-color-opposite: white;
+  --txt-color-opposite: #fefcfb;
   /* --border-test: 2px solid black; */
   --icon-color: black;
-  --icon-color-opposite: white;
+  --icon-color-opposite: #fefcfb;
   --display: visible;
   --display2: none;
-  --hover-nav-color: rgba(0, 0, 0, 0.37);
+  --hover-nav-color: black;
 }
 
 /* Cursor */
@@ -77,12 +77,16 @@ h1 {
   padding: 0 8px;
 }
 
-.fa-sun:hover,
+.mode:hover {
+  /* color: var(--icon-color); */
+  fill: var(--icon-color);
+}
+
+/* .fa-sun:hover,
 .fa-moon:hover {
-  background-color: var(--hover-nav-color);
   border-radius: 6%;
   padding: 0 6px;
-}
+} */
 
 /* Needed for Sticky to work for Navigation */
 header {
